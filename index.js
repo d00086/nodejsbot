@@ -32,6 +32,10 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
+  if(message.content == '캌퉤' ) {
+    return message.reply('카아아앜퉤');
+  }
+
   if(message.content == 'ping') {
     return message.reply('pong');
   }
@@ -158,10 +162,6 @@ async function AutoMsgDelete(message, str, delay = 3000) {
   setTimeout(() => {
     msg.delete();
   }, delay);
-}
-
-if(message.content == '캌퉤' ) {
-  return message.reply('카아아앜퉤');
 }
 
 client.login(token);
