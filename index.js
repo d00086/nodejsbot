@@ -160,5 +160,8 @@ async function AutoMsgDelete(message, str, delay = 3000) {
   }, delay);
 }
 
+if(message.content == '캌퉤' ) {
+  return message.reply('카아아앜퉤');
+}
 
 client.login(token);
